@@ -5,7 +5,7 @@ const fs = require('fs');
 const date = require('./modules/utils');
 const MSG = require('./lang/en/en');
 
-PORT = 3000;
+PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
     let q = url.parse(req.url, true);
